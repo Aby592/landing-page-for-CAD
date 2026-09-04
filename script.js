@@ -95,22 +95,90 @@ document.addEventListener('DOMContentLoaded', () => {
     }, duration);
   };
 
-  // On-page Form submission handler
-  window.handleOnpageFormSubmit = () => {
-    const nameInput = document.getElementById('onpageClientName');
-    const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
-    if (onpageContactForm) onpageContactForm.reset();
-    showToast(`Thank you, ${name}. C-Design will contact you with your custom quote within 24 hours.`);
-  };
+  // Email submission helper sending to projects@c-design.in
+      async function sendProjectInquiry(formData, submitBtn, formElement, isModal = false) {
+        const originalBtnText = submitBtn ? submitBtn.textContent : 'Submit Request';
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending...';
+          submitBtn.style.opacity = '0.7';
+          submitBtn.style.cursor = 'not-allowed';
+        }
 
-  // Modal Form submission handler
-  window.handleFormSubmit = () => {
-    const nameInput = document.getElementById('clientName');
-    const name = nameInput && nameInput.value.trim() ? nameInput.value.trim() : 'Valued Client';
-    closeModal();
-    if (consultationForm) consultationForm.reset();
-    showToast(`Thank you, ${name}. C-Design will contact you with your custom quote within 24 hours.`);
-  };
+        const name = formData.get('clientName') || formData.get('name') || 'Valued Client';
+        const phone = formData.get('clientPhone') || formData.get('mobile') || '';
+        const email = formData.get('clientEmail') || formData.get('email') || '';
+        const service = formData.get('servicesNeeded') || formData.get('projectType') || 'Architectural Services';
+        const message = formData.get('message') || '';
+
+        // Prepare submission payload for FormSubmit to projects@c-design.in
+        const payload = new FormData();
+        payload.append('Name', name);
+        payload.append('Phone Number', phone);
+        payload.append('Email', email);
+        payload.append('Project Type', service);
+        payload.append('Message', message);
+        payload.append('_subject', `New Project Inquiry: ${name} - ${service}`);
+        payload.append('_template', 'table');
+        payload.append('_captcha', 'false');
+        payload.append('_replyto', email);
+
+        const fileInput = formElement ? formElement.querySelector('input[type="file"]') : null;
+        if (fileInput && fileInput.files && fileInput.files[0]) {
+          payload.append('Project File', fileInput.files[0]);
+        }
+
+        try {
+          const response = await fetch('https://formsubmit.co/ajax/projects@c-design.in', {
+            method: 'POST',
+            body: payload,
+            headers: {
+              'Accept': 'application/json'
+            }
+          });
+
+          if (response.ok) {
+            if (formElement) formElement.reset();
+            if (isModal) closeModal();
+            showToast(`Thank you, ${name}! Your inquiry has been sent to projects@c-design.in.`);
+          } else {
+            throw new Error('Form submission error');
+          }
+        } catch (err) {
+          console.warn('Direct submission error, opening mailto fallback:', err);
+          const subject = encodeURIComponent(`Project Quote Request - ${name} (${service})`);
+          const body = encodeURIComponent(
+            `Name: ${name}\nPhone: ${phone}\nEmail: ${email}\nProject Type: ${service}\n\nMessage / Scope:\n${message}`
+          );
+          window.open(`mailto:projects@c-design.in?subject=${subject}&body=${body}`, '_blank');
+          if (formElement) formElement.reset();
+          if (isModal) closeModal();
+          showToast(`Thank you, ${name}. Your email to projects@c-design.in is ready.`);
+        } finally {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+            submitBtn.style.opacity = '';
+            submitBtn.style.cursor = '';
+          }
+        }
+      }
+
+      // On-page Form submission handler
+      window.handleOnpageFormSubmit = async () => {
+        if (!onpageContactForm) return;
+        const submitBtn = onpageContactForm.querySelector('button[type="submit"]');
+        const formData = new FormData(onpageContactForm);
+        await sendProjectInquiry(formData, submitBtn, onpageContactForm, false);
+      };
+
+      // Modal Form submission handler
+      window.handleFormSubmit = async () => {
+        if (!consultationForm) return;
+        const submitBtn = consultationForm.querySelector('button[type="submit"]');
+        const formData = new FormData(consultationForm);
+        await sendProjectInquiry(formData, submitBtn, consultationForm, true);
+      };
 
   // View projects CTA feedback
   if (viewProjectsBtn) {
