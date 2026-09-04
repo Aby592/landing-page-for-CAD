@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#F5F2EC" />
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#38342F" stroke-width="1.5" />
+  <rect x="30" y="30" width="740" height="540" fill="none" stroke="#38342F" stroke-width="0.75" stroke-dasharray="4 2" opacity="0.5" />
+
+  <!-- Ground Line & Earth Hatch -->
+  <line x1="60" y1="460" x2="740" y2="460" stroke="#23201D" stroke-width="2.5" />
+  <path d="M80 460 l-10 16 M130 460 l-10 16 M180 460 l-10 16 M230 460 l-10 16 M280 460 l-10 16 M330 460 l-10 16 M380 460 l-10 16 M430 460 l-10 16 M480 460 l-10 16 M530 460 l-10 16 M580 460 l-10 16 M630 460 l-10 16 M680 460 l-10 16" stroke="#756F66" stroke-width="1" />
+
+  <!-- Foundation Footings -->
+  <rect x="130" y="460" width="60" height="25" fill="#DCD6CA" stroke="#23201D" stroke-width="1.5" />
+  <rect x="350" y="460" width="60" height="25" fill="#DCD6CA" stroke="#23201D" stroke-width="1.5" />
+  <rect x="630" y="460" width="60" height="25" fill="#DCD6CA" stroke="#23201D" stroke-width="1.5" />
+
+  <!-- Ground Slab (Cut Solid Dark) -->
+  <rect x="150" y="440" width="520" height="20" fill="#23201D" stroke="#23201D" stroke-width="1" />
+  
+  <!-- First Floor Slab -->
+  <rect x="150" y="285" width="520" height="16" fill="#23201D" stroke="#23201D" stroke-width="1" />
+
+  <!-- Roof Slab with Parapet -->
+  <rect x="140" y="130" width="540" height="18" fill="#23201D" stroke="#23201D" stroke-width="1" />
+  <rect x="140" y="105" width="20" height="25" fill="#23201D" stroke="#23201D" stroke-width="1" />
+  <rect x="660" y="105" width="20" height="25" fill="#23201D" stroke="#23201D" stroke-width="1" />
+
+  <!-- Cut External Structural Walls (Solid Cut) -->
+  <rect x="150" y="148" width="20" height="292" fill="#23201D" stroke="#23201D" stroke-width="1" />
+  <rect x="650" y="148" width="20" height="292" fill="#23201D" stroke="#23201D" stroke-width="1" />
+
+  <!-- Internal Staircase Profile & Handrail -->
+  <g fill="none" stroke="#23201D" stroke-width="1.5">
+    <path d="M230 440 L245 440 L245 425 L260 425 L260 410 L275 410 L275 395 L290 395 L290 380 L305 380 L305 365 L320 365 L320 350 L335 350 L335 335 L350 335 L350 320 L365 320 L365 305 L380 305 L380 301" />
+    <line x1="230" y1="370" x2="380" y2="235" stroke="#9E5B19" stroke-width="1.5" />
+    <line x1="245" y1="440" x2="245" y2="355" stroke="#756F66" stroke-width="0.8" />
+    <line x1="290" y1="395" x2="290" y2="315" stroke="#756F66" stroke-width="0.8" />
+    <line x1="335" y1="350" x2="335" y2="275" stroke="#756F66" stroke-width="0.8" />
+    <line x1="380" y1="305" x2="380" y2="235" stroke="#756F66" stroke-width="0.8" />
+  </g>
+
+  <!-- Interior Openings in Elevation -->
+  <rect x="440" y="301" width="75" height="139" fill="none" stroke="#756F66" stroke-width="1.2" />
+  <rect x="540" y="148" width="95" height="137" fill="none" stroke="#756F66" stroke-width="1.2" />
+
+  <!-- Cut Divider Wall -->
+  <line x1="350" y1="148" x2="350" y2="285" stroke="#23201D" stroke-width="2.5" />
+
+  <!-- Ceiling Plenums (Suspended Ceiling Lines) -->
+  <line x1="170" y1="160" x2="650" y2="160" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="4 2" />
+  <line x1="170" y1="315" x2="650" y2="315" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="4 2" />
+
+  <!-- Section Room Labels -->
+  <text x="260" y="215" font-family="sans-serif" font-size="9" font-weight="bold" fill="#23201D">MASTER BEDROOM</text>
+  <text x="260" y="227" font-family="monospace" font-size="7.5" fill="#756F66">CH: 2,750 mm</text>
+
+  <text x="540" y="215" font-family="sans-serif" font-size="9" font-weight="bold" fill="#23201D">STUDY / OFFICE</text>
+  <text x="540" y="227" font-family="monospace" font-size="7.5" fill="#756F66">CH: 2,750 mm</text>
+
+  <text x="490" y="375" font-family="sans-serif" font-size="9" font-weight="bold" fill="#23201D">LIVING SALON</text>
+  <text x="490" y="387" font-family="monospace" font-size="7.5" fill="#756F66">CH: 3,000 mm</text>
+
+  <!-- Level Markers (Right Side) -->
+  <g transform="translate(685, 0)">
+    <line x1="0" y1="440" x2="50" y2="440" stroke="#23201D" stroke-width="1" stroke-dasharray="3 2" />
+    <circle cx="15" cy="440" r="3.5" fill="#23201D" />
+    <text x="25" y="436" font-family="monospace" font-size="8.5" font-weight="bold" fill="#23201D">+0.00</text>
+    
+    <line x1="0" y1="285" x2="50" y2="285" stroke="#23201D" stroke-width="1" stroke-dasharray="3 2" />
+    <circle cx="15" cy="285" r="3.5" fill="#23201D" />
+    <text x="25" y="281" font-family="monospace" font-size="8.5" font-weight="bold" fill="#23201D">+3.60</text>
+    
+    <line x1="0" y1="130" x2="50" y2="130" stroke="#23201D" stroke-width="1" stroke-dasharray="3 2" />
+    <circle cx="15" cy="130" r="3.5" fill="#23201D" />
+    <text x="25" y="126" font-family="monospace" font-size="8.5" font-weight="bold" fill="#23201D">+7.20</text>
+  </g>
+
+  <!-- Title Block Bottom Right -->
+  <g transform="translate(540, 500)">
+    <rect x="0" y="0" width="220" height="60" fill="#EDEAE2" stroke="#38342F" stroke-width="1" />
+    <line x1="0" y1="20" x2="220" y2="20" stroke="#38342F" stroke-width="0.75" />
+    <line x1="0" y1="40" x2="220" y2="40" stroke="#38342F" stroke-width="0.75" />
+    <line x1="110" y1="20" x2="110" y2="60" stroke="#38342F" stroke-width="0.75" />
+    
+    <text x="10" y="14" font-family="sans-serif" font-size="8.5" font-weight="bold" letter-spacing="0.05em" fill="#23201D">ARCHITECTURE DETAILING</text>
+    <text x="10" y="33" font-family="sans-serif" font-size="7.5" fill="#756F66">SCALE: 1:100</text>
+    <text x="120" y="33" font-family="sans-serif" font-size="7.5" fill="#756F66">DWG: AR-DET-01</text>
+    <text x="10" y="53" font-family="sans-serif" font-size="7.5" font-weight="bold" fill="#9E5B19">C-DESIGN ARCHITECTURE</text>
+  </g>
+</svg>

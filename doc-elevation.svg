@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%">
+  <rect width="800" height="600" fill="#F5F2EC" />
+  
+  <!-- Outer Drawing Border -->
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#38342F" stroke-width="1.5" />
+  <rect x="30" y="30" width="740" height="540" fill="none" stroke="#38342F" stroke-width="0.75" stroke-dasharray="4 2" opacity="0.5" />
+
+  <!-- Grid Guidelines -->
+  <line x1="160" y1="60" x2="160" y2="490" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="6 4" />
+  <line x1="340" y1="60" x2="340" y2="490" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="6 4" />
+  <line x1="520" y1="60" x2="520" y2="490" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="6 4" />
+  <line x1="680" y1="60" x2="680" y2="490" stroke="#B5ADA2" stroke-width="0.8" stroke-dasharray="6 4" />
+
+  <!-- Grid Bubbles Top -->
+  <circle cx="160" cy="52" r="10" fill="none" stroke="#38342F" stroke-width="1" />
+  <text x="160" y="56" font-family="sans-serif" font-size="10" font-weight="bold" fill="#23201D" text-anchor="middle">A</text>
+  <circle cx="340" cy="52" r="10" fill="none" stroke="#38342F" stroke-width="1" />
+  <text x="340" y="56" font-family="sans-serif" font-size="10" font-weight="bold" fill="#23201D" text-anchor="middle">B</text>
+  <circle cx="520" cy="52" r="10" fill="none" stroke="#38342F" stroke-width="1" />
+  <text x="520" y="56" font-family="sans-serif" font-size="10" font-weight="bold" fill="#23201D" text-anchor="middle">C</text>
+  <circle cx="680" cy="52" r="10" fill="none" stroke="#38342F" stroke-width="1" />
+  <text x="680" y="56" font-family="sans-serif" font-size="10" font-weight="bold" fill="#23201D" text-anchor="middle">D</text>
+
+  <!-- Natural Ground Line & Hatch -->
+  <line x1="60" y1="450" x2="740" y2="450" stroke="#23201D" stroke-width="2.5" />
+  <path d="M80 450 l-10 16 M120 450 l-10 16 M160 450 l-10 16 M200 450 l-10 16 M240 450 l-10 16 M280 450 l-10 16 M320 450 l-10 16 M360 450 l-10 16 M400 450 l-10 16 M440 450 l-10 16 M480 450 l-10 16 M520 450 l-10 16 M560 450 l-10 16 M600 450 l-10 16 M640 450 l-10 16 M680 450 l-10 16 M720 450 l-10 16" stroke="#756F66" stroke-width="1" />
+
+  <!-- Main Building Massing (Multi-story Architectural Facade) -->
+  <rect x="160" y="150" width="520" height="300" fill="#EFECE5" stroke="#23201D" stroke-width="2" />
+  
+  <!-- Upper Cantilever volume -->
+  <rect x="140" y="120" width="280" height="180" fill="#E5E0D5" stroke="#23201D" stroke-width="1.8" />
+  <!-- Parapet / Roof Canopy -->
+  <line x1="130" y1="120" x2="700" y2="120" stroke="#23201D" stroke-width="2.5" />
+  <rect x="130" y="110" width="570" height="10" fill="#DCD6CA" stroke="#23201D" stroke-width="1.5" />
+
+  <!-- Floor Slabs Line -->
+  <line x1="140" y1="300" x2="680" y2="300" stroke="#23201D" stroke-width="1.5" />
+  <line x1="140" y1="306" x2="680" y2="306" stroke="#23201D" stroke-width="1" />
+
+  <!-- Balconies with Glass Railings -->
+  <rect x="440" y="260" width="220" height="40" fill="rgba(255,255,255,0.7)" stroke="#23201D" stroke-width="1.2" />
+  <line x1="440" y1="270" x2="660" y2="270" stroke="#756F66" stroke-width="0.8" />
+  <line x1="484" y1="260" x2="484" y2="300" stroke="#756F66" stroke-width="0.8" />
+  <line x1="528" y1="260" x2="528" y2="300" stroke="#756F66" stroke-width="0.8" />
+  <line x1="572" y1="260" x2="572" y2="300" stroke="#756F66" stroke-width="0.8" />
+  <line x1="616" y1="260" x2="616" y2="300" stroke="#756F66" stroke-width="0.8" />
+
+  <!-- Ground Floor Windows -->
+  <rect x="180" y="330" width="130" height="120" fill="#FAF9F6" stroke="#23201D" stroke-width="1.2" />
+  <line x1="245" y1="330" x2="245" y2="450" stroke="#23201D" stroke-width="1" />
+  <line x1="180" y1="370" x2="310" y2="370" stroke="#B5ADA2" stroke-width="0.8" />
+  <line x1="180" y1="410" x2="310" y2="410" stroke="#B5ADA2" stroke-width="0.8" />
+
+  <!-- Main Entrance Glass Pivot Door & Canopy -->
+  <rect x="350" y="330" width="120" height="120" fill="#FAF9F6" stroke="#23201D" stroke-width="1.5" />
+  <rect x="360" y="340" width="100" height="110" fill="none" stroke="#23201D" stroke-width="1" />
+  <line x1="410" y1="340" x2="410" y2="450" stroke="#23201D" stroke-width="1" />
+  <line x1="330" y1="325" x2="490" y2="325" stroke="#23201D" stroke-width="3" />
+
+  <!-- First Floor Louver Screens -->
+  <g stroke="#9E5B19" stroke-width="1.2">
+    <line x1="160" y1="140" x2="260" y2="140" />
+    <line x1="160" y1="155" x2="260" y2="155" />
+    <line x1="160" y1="170" x2="260" y2="170" />
+    <line x1="160" y1="185" x2="260" y2="185" />
+    <line x1="160" y1="200" x2="260" y2="200" />
+    <line x1="160" y1="215" x2="260" y2="215" />
+    <line x1="160" y1="230" x2="260" y2="230" />
+    <line x1="160" y1="245" x2="260" y2="245" />
+    <line x1="160" y1="260" x2="260" y2="260" />
+    <line x1="160" y1="275" x2="260" y2="275" />
+  </g>
+
+  <!-- Upper Windows -->
+  <rect x="280" y="150" width="120" height="130" fill="#FAF9F6" stroke="#23201D" stroke-width="1.2" />
+  <line x1="340" y1="150" x2="340" y2="280" stroke="#23201D" stroke-width="1" />
+  <rect x="450" y="150" width="210" height="100" fill="#FAF9F6" stroke="#23201D" stroke-width="1.2" />
+  <line x1="520" y1="150" x2="520" y2="250" stroke="#23201D" stroke-width="1" />
+  <line x1="590" y1="150" x2="590" y2="250" stroke="#23201D" stroke-width="1" />
+
+  <!-- Datum Levels -->
+  <line x1="65" y1="450" x2="130" y2="450" stroke="#23201D" stroke-width="1" stroke-dasharray="4 2" />
+  <circle cx="80" cy="450" r="4" fill="#23201D" />
+  <text x="90" y="446" font-family="monospace" font-size="9" font-weight="bold" fill="#23201D">+0.00 FFL</text>
+  
+  <line x1="65" y1="300" x2="130" y2="300" stroke="#23201D" stroke-width="1" stroke-dasharray="4 2" />
+  <circle cx="80" cy="300" r="4" fill="#23201D" />
+  <text x="90" y="296" font-family="monospace" font-size="9" font-weight="bold" fill="#23201D">+3.60 L1</text>
+  
+  <line x1="65" y1="120" x2="130" y2="120" stroke="#23201D" stroke-width="1" stroke-dasharray="4 2" />
+  <circle cx="80" cy="120" r="4" fill="#23201D" />
+  <text x="90" y="116" font-family="monospace" font-size="9" font-weight="bold" fill="#23201D">+7.20 ROOF</text>
+
+  <!-- Title Block Bottom Right -->
+  <g transform="translate(540, 500)">
+    <rect x="0" y="0" width="220" height="60" fill="#EDEAE2" stroke="#38342F" stroke-width="1" />
+    <line x1="0" y1="20" x2="220" y2="20" stroke="#38342F" stroke-width="0.75" />
+    <line x1="0" y1="40" x2="220" y2="40" stroke="#38342F" stroke-width="0.75" />
+    <line x1="110" y1="20" x2="110" y2="60" stroke="#38342F" stroke-width="0.75" />
+    
+    <text x="10" y="14" font-family="sans-serif" font-size="8.5" font-weight="bold" letter-spacing="0.05em" fill="#23201D">BIM &amp; REVIT MODELING</text>
+    <text x="10" y="33" font-family="sans-serif" font-size="7.5" fill="#756F66">SCALE: 1:100</text>
+    <text x="120" y="33" font-family="sans-serif" font-size="7.5" fill="#756F66">DWG: BIM-REV-01</text>
+    <text x="10" y="53" font-family="sans-serif" font-size="7.5" font-weight="bold" fill="#9E5B19">C-DESIGN ARCHITECTURE</text>
+  </g>
+</svg>
