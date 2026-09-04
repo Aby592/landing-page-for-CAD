@@ -85,6 +85,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Ensure select placeholder color is consistent across mobile & desktop browsers
+  const quoteSelects = document.querySelectorAll('.quote-select');
+  quoteSelects.forEach((select) => {
+    const syncColor = () => {
+      if (!select.value) {
+        select.style.color = '#6E6961';
+      } else {
+        select.style.color = '#23201D';
+      }
+    };
+    select.addEventListener('change', syncColor);
+    syncColor();
+  });
+
   // Toast notification utility
   const showToast = (message, duration = 4000) => {
     if (!toast || !toastMessage) return;

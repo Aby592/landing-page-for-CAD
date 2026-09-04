@@ -860,6 +860,109 @@ a.meta-value:hover {
   background-color: #201D1A;
 }
 
+.quote-popup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.quote-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .quote-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.quote-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.quote-input,
+.quote-select,
+.quote-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #DDD8CF;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding: 11px 14px;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #23201D;
+  outline: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.quote-input {
+  height: 46px;
+  min-height: 46px;
+}
+
+.quote-input::placeholder,
+.quote-textarea::placeholder {
+  color: #6E6961;
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.quote-input:focus,
+.quote-select:focus,
+.quote-textarea:focus {
+  background-color: #FFFFFF;
+  border-color: rgba(35, 32, 29, 0.3);
+  box-shadow: 0 0 0 2px rgba(56, 52, 49, 0.15);
+}
+
+.quote-select-wrap {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.quote-select {
+  height: 46px;
+  min-height: 46px;
+  line-height: normal;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2323201D' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 12px 12px;
+  cursor: pointer;
+  padding-right: 36px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.quote-select:invalid,
+.quote-select:has(option[value=""]:checked) {
+  color: #6E6961;
+}
+
+.quote-select option {
+  background-color: #EFECE6;
+  color: #23201D;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 12px;
+}
+
+.quote-select option[value=""][disabled] {
+  color: #6E6961;
+}
+
 @media (max-width: 860px) {
   .modal-columns {
     grid-template-columns: 1fr;
@@ -946,7 +1049,8 @@ a.meta-value:hover {
     border-radius: 20px;
   }
 
-  .form-row {
+  .form-row,
+  .quote-form-row {
     grid-template-columns: 1fr;
   }
 }
